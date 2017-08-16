@@ -480,7 +480,7 @@
 	color: #fff;
 } 
 
-.size p a {
+.size p span {
 	display: inline-block;
 	padding: 2px 12px;
 	margin: 7px 7px 7px 0;
@@ -489,28 +489,32 @@
 	line-height: 18px;
 	text-align: center;
 }
-.amount span {
-	display: inline-block;
-	border: 1px solid #CCC;
-	text-align: center;
-	vertical-align: middle;
-	font-size: 14px;
-	margin-right: 6px;
-}
 
 .amount input {
-	width: 38px;
-	padding: 4px 5px;
+	width: 22px;
+	height: 16px;
 	margin: 0;
+	padding: 1px 0;
 	line-height: 1;
-	height: 14px;
 	vertical-align: top;
 	text-align: center;
 	color: #333;
-	border: none;
 	outline: none;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	vertical-align: middle;
 	font-family: tahoma, arial, simsun, "宋体";
 	box-sizing: content-box;
+}
+.amount input:nth-of-type(2){
+	padding: 1px 4px;
+	border: 1px solid #ccc;
+	border-left:  0;
+	border-right:  0;
+} 
+.amount em {
+	color: #666;
+	vertical-align: middle;
 }
 .amount a {
 	display: inline-block;
@@ -791,41 +795,62 @@
 .details-right-inner {
 	border: 1px solid #eaeaea;
 	border-top:0 ;
+	padding-top: 50px;
 	position: relative;
 	top: 0;
 	left: 0;
 }
 .details-right-nav {
-	position: relative;
+	position: absolute;
+	top: 0;
+	z-index: 999;
 	width: 888px;
 	height: 48px;
 	border-bottom: 1px solid #EAEAEA;
-	border-top: 1px solid #EAEAEA;
 	background-color: #F8F8F8;
-	top: 0;
-	left: 0;
 }
 
 .details-right-nav a {
 	float: left;
 	border-right: 1px solid #EAEAEA;
+	border-top: 1px solid #EAEAEA;
 	width: 159px;
 	color: #333;
 	text-align: center;
 	height: 48px;
 	line-height: 48px;
-	font-size: 16px;
 	cursor: pointer;
 	vertical-align: top;
 }
 
-.details-right-nav a:last-child {
+.details-right-nav .active {
+	font-weight: 500;
+	height: 45px;
+	background-color: white;
+	border-top:  4px solid #D41C44;
+	color: #D41C44;
+}
+.details-right-nav a:nth-of-type(4){
+	display: none;
+	float: right;
+	background-color: #F5345E;
+	width: 120px;
+	height: 36px;
+	line-height: 36px;
+	color: #FFF;
+	margin-right: 10px;
+	margin-top: 5px;
+	text-align: center;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+.details-right-nav a:nth-of-type(5) {
 	float: right;
 	border-right: 0px;
-	border-left:1px solid #EAEAEA;
 }
 
-.details-right-nav a:last-child i {
+.details-right-nav a:nth-of-type(5) i {
 	display: inline-block;
 	width: 29px;
 	height: 16px;
