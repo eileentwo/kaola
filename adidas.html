@@ -3,10 +3,16 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<script src="html5shiv.min.js" type="text/javascript" charset="utf-8"></script>
 		
-		<link rel="stylesheet" type="text/css" href="css/commen.css"/>
+		<script src="js/jquery-1.8.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" class="library" src="js/jquery.colorbox-min.js"></script>
+		<script src="js/adidas.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		
+		
 		<link rel="stylesheet" type="text/css" href="css/cssReset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/commen.css"/>
 		<link rel="stylesheet" type="text/css" href="css/adidas.css"/>
 	</head>
 	<body>
@@ -266,51 +272,43 @@
 						</ul>
 					</div>
 					<div class="product-content ClearFix">
-						<div class="product-left">
-							<a href="#"><i></i></a>
-							<a href="#"><i></i></a>
-							<div class="product-left-list">
-								<ul>
-									<li>
-										<a href="#">
-											<img src="img/index-2/fad13780-4463-4577-8d0e-8d012bb1ab38_002.jpg"/>
-										</a>
+						    
+					<div class="product-left" id="playimages">
+					  <div class="con-fangDaIMg">
+					  	<!-- 正常显示的图片-->
+					  	<img class="img"  src="" >
+					    <!-- 滑块-->  
+					    <div class="magnifyingBegin"></div>
+					    <!-- 放大镜显示的图片 -->
+					    <div class="magnifyingShow"><img src="img/index-2/fad13780-4463-4577-8d0e-8d012bb1ab38.jpg" ></div>
+					  </div>
+					  <div class="product-left-list">
+							<a class="prev" id="prev">&lt;</a>
+							<a class="next" id="next">&gt;</a>
+							<div>
+								<ul class="con-FangDa-ImgList">
+									<li style="z-index: 1;">
+										<img class="active" src="img/index-2/fad13780-4463-4577-8d0e-8d012bb1ab38.jpg" data-bigimg="img/index-2/fad13780-4463-4577-8d0e-8d012bb1ab38.jpg"/>
 									</li>
 									<li>
-										<a href="#">
-											<img src="img/index-2/81eb9b22-7722-49ca-8549-9bddcb8169c4.jpg"/>
-										</a>
+										<img src="img/index-2/81eb9b22-7722-49ca-8549-9bddcb8169c4.jpg" data-bigimg="img/index-2/81eb9b22-7722-49ca-8549-9bddcb8169c4.jpg"/>
 									</li>
 									<li>
-										<a href="#">
-											<img src="img/index-2/da755e16-851f-4209-87e7-4386836f21b3.jpg"/>
-										</a>
+										<img src="img/index-2/da755e16-851f-4209-87e7-4386836f21b3.jpg" data-bigimg="img/index-2/da755e16-851f-4209-87e7-4386836f21b3.jpg"/>
 									</li>
 									<li>
-										<a href="#">
-											<img src="img/index-2/05e6e23d-b5f4-4123-91b5-85f2cc774a3c.jpg"/>
-										</a>
+										<img src="img/index-2/05e6e23d-b5f4-4123-91b5-85f2cc774a3c.jpg" data-bigimg="img/index-2/05e6e23d-b5f4-4123-91b5-85f2cc774a3c.jpg"/>
 									</li>
 									<li>
-										<a href="#">
-											<img src="img/index-2/7f3a5423-d684-43de-b6fd-26cbe59b864b.jpg"/>
-										</a>
+										<img src="img/index-2/7f3a5423-d684-43de-b6fd-26cbe59b864b.jpg" data-bigimg="img/index-2/7f3a5423-d684-43de-b6fd-26cbe59b864b.jpg"/>
 									</li>
 									<li>
-										<a href="#">
-											<img src="img/index-2/f729ac04-f0c8-433e-a6bd-bda55e99ab65.jpg"/>
-										</a>
+										<img src="img/index-2/f729ac04-f0c8-433e-a6bd-bda55e99ab65.jpg" data-bigimg="img/index-2/f729ac04-f0c8-433e-a6bd-bda55e99ab65.jpg"  />
 									</li>
 								</ul>
-							</div>	
-							<div class="showbox">
-								<span>Adidas 阿迪达斯 Superstar 黑白金标贝壳头男女滑板鞋 </span>
-								<img src="img/index-2/fad13780-4463-4577-8d0e-8d012bb1ab38.jpg" alt="Adidas 阿迪达斯 Superstar 黑白金标贝壳头男女滑板鞋 "/>
-								<a href="#"></a>
-								<mark></mark>
 							</div>
-							<div class="showB"></div>
-						</div>
+						</div>	
+					</div>
 						<div class="product-right">
 							<div class="country">
 								<img src="img/index-2/30a0bc3dd4e84c5a9d585257cd4447ae1419662492273i46me5ps10006.png"/>

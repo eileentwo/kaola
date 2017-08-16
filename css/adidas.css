@@ -91,14 +91,7 @@
 .product-content>div {
 	float: left;
 }
-.product-left {
-	float: left;
-	width: 402px;
-	height: 488px;
-	position: relative;
-	display: inline;
-	z-index: 1000;
-}
+
 
 .product-right {
 	position: relative;
@@ -108,59 +101,119 @@
 	font-size: 12px;
 }
 
-.product-left>a {
+/*主容器*/
+.product-left {
+	float: left;
+	width: 402px;
+	height: 488px;
+	position: relative;
+	display: inline;
+	z-index: 1000;
+}
+/*正常容器*/
+.con-fangDaIMg{
+	position: relative;
+	top: 0;
+	left: 0;
+	border: 1px solid #EEE;
+	width: 400px;
+	height: 400px;
+	cursor: crosshair;
+}
+.con-fangDaIMg > img{
+	width: 100%;
+	height:100%
+}
+/*滑块*/
+.magnifyingBegin{
+	display: none;
+	width: 200px;
+	height: 200px;
+	background-color: #000;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}	
+/*放大镜显示区域*/
+.magnifyingShow {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 410px;
+	z-index: 9999;
+	border: 1px solid #EEE;
+	width: 400px;
+	height: 400px;
+	overflow: hidden;
+}
+
+.magnifyingShow img {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/*设置选择图片容器*/
+.product-left-list{
+	position: absolute;
+	height: 76px;
+	top: 419px;
+	left:0;
+	width:400px;
+}
+
+.product-left-list>a {
 	display: inline-block;
 	width: 33px;
-	height: 62px;
-	line-height: 62px;
+	height: 74px;
+	line-height: 74px;
 	text-align: center;
 	font: 30px/62px 'FontAwesome';
 	color: #999;
-	padding: 1px 0;
+	background-color: #fff;
 	border: 1px solid #EEE;
 	text-decoration: none;
 	position: absolute;
 	z-index: 1000;
-	top: 421px;
+	top: 0;
+	left: 0;
 }
-.product-left>a:nth-of-type(1) i:before {
-	content: "\f104";
-	
-}
-.product-left>a:nth-of-type(2) i:before {
-	content: "\f105";
-	
-}
-.product-left>a:nth-of-type(2) {
+
+.product-left-list>a:nth-of-type(2) {
 	left:365px ;
+}
+
+.product-left-list div{
+	width:330px;
+	height: 76px;
+	overflow: hidden;
+	position: absolute;
+	left: 40px;
+	top: 0;
+}
+.product-left-list ul {
+	height: 74px;
+	position: absolute;
+	top: 2px;
 }
 
 .product-left .hover {
 	color: #f00;
 	border-color: #f00;
 }
-.product-left-list {
-	position: absolute;
-	height: 70px;
-	top: 419px;
-	left: 35px;
-	width: 330px;
-}
-.product-left ul {
-	width: 399px;
-	height: 70px;
-	position:absolute ;
-	top: 0;
-	padding-left: 10px;
-	overflow: hidden;
-	/*z-index: 2;*/
-}
-.product-left li {
+			
+.product-left-list li {
 	float: left;
+	height: 74px;
+	padding:0 5px;
+}
+
+.product-left-list img {
 	width: 70px;
 	height: 70px;
-	overflow: hidden;
-	margin-right: 10px;
 }
 .product-left li a {
 	display: inline-block;
@@ -169,39 +222,11 @@
 	width: 64px;
 	border: 1px solid #EEE;
 }
-.showbox {
-	position: relative;
-	top: 0;
-	left: 0;
-	border: 1px solid #EEE;
-	width: 400px;
-	height: 400px;
-	overflow: hidden;
-	cursor: crosshair;
-}
 
-.showbox img {
-	width: 100%;
-	height: auto;
+.product-left-list  .active{
+	border: 2px solid red;
 }
-
-.showbox span {
-	display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-.showB {
-	display: none;
-	position: absolute;
-	top: 0;
-	left: 410px;
-	border: 1px solid #EEE;
-	width: 400px;
-	height: 400px;
-	overflow: hidden;
-	cursor: crosshair;
-}
+/*product-left 部分结束*/
 .product-right {
 	position: relative;
 	float: left;
