@@ -114,10 +114,16 @@ $(function(){
 	
 	
 	//尺码部分
+	$sli = $('#size').find('li');
 	$sSpan = $('#size').find('span');
-	$sSpan.on('click mouseover',function(){
-		$sSpan.css('border-color','#ccc');
-		$sSpan.eq($(this).index()).css('border-color','red');
+	$sli.mouseover(function(){
+		$sli.css('border-color','#ccc');
+		$sli.eq($(this).index()).css('border-color','red');
+	})
+	$sli.click(function(){
+		$sli.eq($(this).index()).css('border-color','red');
+		$sSpan.css('display','none');
+		$sSpan.eq($(this).index()).css('display','inline-block');
 	})
 	//吸顶部分
 	var b = $('#detailsNav').offset().top;
@@ -125,12 +131,10 @@ $(function(){
 		var c = $(document).scrollTop();
 		if(b<=c){
 			$('#detailsNav').css('position','fixed');
-			$('#detailsNav').css('left','415px');
 			$('#detailsNav').css('background-color','white');
 			$('#detailsNav a').eq(3).css('display','block');
 		}else{
 			$('#detailsNav').css('position','absolute');
-			$('#detailsNav').css('left','0');
 			$('#detailsNav').css('background-color','#F8F8F8');
 			$('#detailsNav a').eq(3).css('display','none');
 		}
@@ -176,17 +180,13 @@ $(function(){
 	
 	
 	//右边导航
-	var d = $('#right-aside').offset().top-50;
+	var d = $('#rightAside').offset().top-50;
 	$(document).on('scroll',function(){
 		var c = $(document).scrollTop();
 		if(d<=c){
-			$('#right-aside').css('position','fixed');
-			$('#right-aside').css('top','50px');
-			$('#right-aside').css('left','87%');
+			$('#rightAside').css('position','fixed');
 		}else{
-			$('#right-aside').css('position','absolute');
-			$('#right-aside').css('top','66px');
-			$('#right-aside').css('left','101%');
+			$('#rightAside').css('position','absolute');
 		}
 	})
 	

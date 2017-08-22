@@ -161,10 +161,11 @@
 	width: 97px;
 	background-color: #fff;
 	overflow: hidden;
+	margin-left: -660px;
 	text-align: center;
 	position: absolute;
 	top: 66px;
-	left:-120px;
+	left:50%;
 	z-index: 999;
 }
 

@@ -63,23 +63,15 @@ $(function(){
     
     
     //两边导航
-	var d = $('#right-aside').offset().top-50;
+	var d = $('#rightAside').offset().top-50;
 	$(document).on('scroll',function(){
 		var c = $(document).scrollTop();
 		if(d<=c){
-			$('#right-aside').css('position','fixed');
-			$('#content-aside').css('position','fixed');
-			$('#right-aside').css('top','50px');
-			$('#right-aside').css('left','87%');
-			$('#content-aside').css('top','50px');
-			$('#content-aside').css('left','6%');
+			$('#rightAside').css('position','fixed');
+			$('#contentAside').css('position','fixed');
 		}else{
-			$('#right-aside').css('position','absolute');
-			$('#content-aside').css('position','absolute');
-			$('#right-aside').css('top','66px');
-			$('#right-aside').css('left','101%');
-			$('#content-aside').css('top','50px');
-			$('#content-aside').css('left','-12%');
+			$('#rightAside').css('position','absolute');
+			$('#contentAside').css('position','absolute');
 		}
 	})
 	//返回顶部

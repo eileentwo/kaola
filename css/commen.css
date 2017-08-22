@@ -421,10 +421,12 @@ section em {
 .right-aside {
 	width: 58px;
 	border: 1px solid #eee;
+	margin-left: 560px;
 	position: absolute;
 	top: 66px;
-	right:-80px;
+	left:50%;
 	z-index: 999;
+	
 }
 
 .right-aside ul li {
