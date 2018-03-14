@@ -61,6 +61,13 @@ $(function(){
     })
     
     
+	//返回顶部
+	$(function(){
+	  $("#backTop").click(function() {
+	      $("html,body").animate({scrollTop:0}, 1000);
+	  }); 
+	 })
+	
     
     //两边导航
 	var d = $('#rightAside').offset().top-50;
@@ -74,102 +81,42 @@ $(function(){
 			$('#contentAside').css('position','absolute');
 		}
 	})
-	//返回顶部
-	$(function(){
-	  $("#backTop").click(function() {
-	      $("html,body").animate({scrollTop:0}, 1000);
-	  }); 
-	 })
-})
+	
+	
+	//两边导航之左边侧边栏监听
+	var _index=0;
+    $("#contentAside .aside_left li").click(function(){
+    	$(this).find('a').addClass('current').parent().siblings().find('a').removeClass('current');
+    	_index = $(this).index() +1;
+    	var _top = $("#content-item" +_index).offset().top;
+    	$("body,html").animate({scrollTop:_top},500);
+    });
+    $(window).scroll(function () {
+        var conitems = $("#content_items").find(".content-item");
+        var contentAside = $("#contentAside");
+        var top = $(document).scrollTop();
+        var currentId = ""; //滚动条现在所在位置的item id
+        conitems.each(function () {//遍历每层楼
+            var m = $(this);
+            var mTop =m.offset().top ;
+            //注意：m.offset().top代表每一个item的顶部位置
+            if (top > mTop-240) {//获取当前所在的楼层的ID赋值给currentId判断到了哪个 楼层
+                currentId =  m.attr("id");
+            } else {
+                return false;
+            }
+        });
+		var reg =/\d+/g;
+        var curIndex = parseInt(currentId.match(reg));//给相应楼层的a设置current 取消其他链接的current
+        if (curIndex) {//判断是否进入了楼层
+        	var curA =$("#contentAside .aside_left li").find('a');
+        	curA.eq(curIndex-1).addClass('current').parent().siblings().find('a').removeClass('current');
+        }
+        
+    });
+    
 
-
-//window.onload = function (){
-//	var Ltitle = document.getElementById('funcTab-left-title');
-//	var allUl =  document.getElementById('funcTab-left-ul');
-//	
-//	function Tover(){
-//		allUl.style.display = 'block';
-//	}
-//	function Tout(){
-//		allUl.style.display = 'none';
-//	}
-//	allUl.onmouseover = Ltitle.onmouseover =Tover;
-//	allUl.onmouseout = Ltitle.onmouseout =Tout;
-//	//轮播图部分
-//	var oDiv = document.getElementById('banks-inner');
-//	var oPrev = oDiv.getElementsByTagName('a')[0];
-//	var oNext = oDiv.getElementsByTagName('a')[1];
-//	var oImg = oDiv.getElementsByTagName('img')[0];
-//	var oUl = oDiv.getElementsByTagName('ul')[0];
-//	var aLi = oUl.getElementsByTagName('li');
-//	
-//	var arrUrl =['img/index-1/1bgo7pq2249_1920_402.jpg','img/index-1/1bgo42ot26_1920_401.jpg','img/index-1/1bgo43tfg19_1920_403.jpg',
-//	'img/index-1/1bgo3h3qe28_1920_404.jpg','img/index-1/1bftp22gp37_1920_405.jpg','img/index-1/1bftp22gp37_1920_406.jpg'];
-//
-//	var num =0;
-//	
-//	for ( var i=0; i<arrUrl.length; i++){
-//		oUl.innerHTML +='<li>' + i + '</li>';
-//	}
-//	
-//	function fnTab(){
-//		oImg.src = arrUrl[num];
-//		for (var i=0; i<aLi.length; i++){
-//			aLi[i].className = '';
-//		}
-//		aLi[num].className = 'hover';
-//	}
-//	fnTab();
-//	
-//	
-//	function Tab(){
-//		for (var i=0; i<aLi.length; i++){
-//			aLi[i].className = '';
-//		}
-//		aLi[num].className = 'hover';
-//	}
-//	
-//	for ( var i=0; i<aLi.length; i++){
-//		aLi[i].index = i;
-//		aLi[i].onmouseover = function (){
-//			num = this.index;
-//			fnTab();
-//		};
-//		
-//	};
-//	oNext.onclick = function(){
-//		num++;
-//		if( num==arrUrl.length){
-//			num=0;
-//		} 
-//		fnTab();
-//	}
-//	oPrev.onclick = function(){
-//		num--;
-//		if( num==-1){
-//			num=arrUrl.length-1;
-//		} 
-//		fnTab();
-//	};
-//	oDiv.onmouseover = function(){
-//		oPrev.style.display = 'block';
-//		oNext.style.display = 'block';
-//	};
-//	
-//	oDiv.onmouseout = function(){
-//		oPrev.style.display = 'none';
-//		oNext.style.display = 'none';
-//	};
-//	
-//	oPrev.onmouseover = function(){
-//		this.style.backgroundPositionY = '-154px';
-//	};
-//	oPrev.onmouseout = function(){
-//		this.style.backgroundPositionY = '-68px';
-//	};
-//	oNext.onmouseover = oPrev.onmouseover;
-//	oNext.onmouseout = oPrev.onmouseout;
-//	
-//};
+    
+});
 
 

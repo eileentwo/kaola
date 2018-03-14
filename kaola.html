@@ -4,11 +4,11 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<script src="html5shiv.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="public/js/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/kaola.js" type="text/javascript" charset="utf-8"></script>
 		
+		<link rel="stylesheet" type="text/css" href="public/css/cssReset.css"/>
 		<link rel="stylesheet" type="text/css" href="css/commen.css"/>
-		<link rel="stylesheet" type="text/css" href="css/cssReset.css"/>
 		<link rel="stylesheet" type="text/css" href="css/kaola.css"/>
 		
 		
@@ -202,44 +202,39 @@
 								<img src="img/index-1/ip50ucjr81_99_49.jpg"/>
 							</a>
 						</div>
-						<ul class="aside-middle">
-							<li>
-								<a href="#content-item1-title">今日限时购</a>
+						<ul class="aside_left">
+							<li class="aside_left_middle">
+								<a href="javascript:;">今日限时购</a>
+							</li>
+							<li class="aside_left_middle">
+								<a href="javascript:;">每日上新</a>
+							</li>
+							<li class="aside_left_middle">
+								<a href="javascript:;">热门品牌</a>
 							</li>
 							<li>
-								<a href="#content-item2-title">每日上新</a>
+								<a href="javascript:;">母婴专区</a>
 							</li>
 							<li>
-								<a href="#content-item3-title">热门品牌</a>
-							</li>
-						</ul>
-						<ul class="aside-bottom">
-							<li>
-								<a href="#content-item4-title">母婴专区</a>
+								<a href="javascript:;">美容彩妆</a>
 							</li>
 							<li>
-								<a href="#content-item5-title">美容彩妆</a>
+								<a href="javascript:;">服饰鞋包</a>
 							</li>
 							<li>
-								<a href="#content-item6-title">服饰鞋包</a>
+								<a href="javascript:;">家居个护</a>
 							</li>
 							<li>
-								<a href="#content-item7-title">家居个护</a>
+								<a href="javascript:;">营养保健</a>
 							</li>
 							<li>
-								<a href="#content-item8-title">营养保健</a>
+								<a href="javascript:;">数码家电</a>
 							</li>
 							<li>
-								<a href="#content-item10-title">海外直邮</a>
+								<a href="javascript:;">环球美食</a>
 							</li>
 							<li>
-								<a href="#content-item9-title">数码家电</a>
-							</li>
-							<li>
-								<a href="#content-item10-title">环球美食</a>
-							</li>
-							<li>
-								<a href="#content-item11-title">运动户外</a>
+								<a href="javascript:;">运动户外</a>
 							</li>
 						</ul>
 						<div>
@@ -291,10 +286,10 @@
 							<img src="img/index-1/1bgb7bf9j24_265_220.jpg"/>
 						</a>
 					</div>
-					<ul class="content-item">
-						<li class="content-item1">
+					<ul class="content-items" id="content_items">
+						<li class="content-item content-item1" id="content-item1">
 							<nav>
-								<p id="content-item1-title">今日限时购</p>
+								<p>今日限时购</p>
 								<div>本场还剩</div>
 								<div class="content-countDown">
 									<em>0</em>
@@ -310,8 +305,8 @@
 									<a href="#">进入限时购频道></a>
 								</p>
 							</nav>
-							<div class="content-item1-bottom">
-								<ul class="item1-left ClearFix">
+							<div class="content-item1-bottom ClearFix">
+								<ul class="item1-left">
 									<li>
 										<div>
 											<a href="#">
@@ -406,9 +401,9 @@
 								</ul>
 							</div>
 						</li>
-						<li class="content-item2">
+						<li class="content-item content-item2" id="content-item2">
 							<nav>
-								<p id="content-item2-title">每日上新</p>
+								<p>每日上新</p>
 								<div>全世界好物，0点更新</div>
 								<p>
 									<a href="#">进入新品频道></a>
@@ -552,9 +547,9 @@
 							</ul>
 							
 						</li>
-						<li class="content-item3">
+						<li class="content-item content-item3" id="content-item3">
 							<nav>
-								<p id="content-item3-title">热门品牌</p>
+								<p>热门品牌</p>
 								<div>全球精选，一网打尽</div>
 								<p>
 									<a href="#">换一批<i></i></a>
@@ -698,9 +693,9 @@
 								</ul>
 							</div>	
 						</li>
-						<li class="content-item4">
+						<li class="content-item" id="content-item4">
 							<nav>
-								<p id="content-item4-title">母婴专区</p>
+								<p>母婴专区</p>
 								<ul>
 									<li><span>热搜词：</span></li>
 									<li>
@@ -891,9 +886,9 @@
 								
 							</div>
 						</li>
-						<li class="content-item4">
+						<li class="content-item" id="content-item5">
 							<nav>
-								<p id="content-item5-title">美容彩妆</p>
+								<p>美容彩妆</p>
 								<ul>
 									<li><span>热搜词：</span></li>
 									<li>
@@ -1087,9 +1082,9 @@
 								
 							</div>
 						</li>
-						<li class="content-item4">
+						<li class="content-item" id="content-item6">
 							<nav>
-								<p id="content-item6-title">服饰鞋包</p>
+								<p>服饰鞋包</p>
 								<ul>
 									<li><span>热搜词：</span></li>
 									<li>
@@ -1280,15 +1275,12 @@
 								<a href="#">
 									<img src="img/index-1/iewe8jsn26_300_300.jpg"/>
 								</a>
-								<a href="#">
-									<img src="img/index-1/1bfr85jfu59_300_300.jpg"/>
-								</a>
 								
 							</div>
 						</li>
-						<li class="content-item4">
+						<li class="content-item" id="content-item7">
 							<nav>
-								<p id="content-item7-title">家居个护</p>
+								<p>家居个护</p>
 								<ul>
 									<li><span>热搜词：</span></li>
 									<li class="Dcolor">
@@ -1481,9 +1473,9 @@
 								</a>
 							</div>
 						</li>
-						<li class="content-item4">
+						<li class="content-item" id="content-item8">
 							<nav>
-								<p id="content-item8-title">营养保健</p>
+								<p>营养保健</p>
 								<ul>
 									<li><span>热搜词：</span></li>
 									<li>
@@ -1679,9 +1671,9 @@
 								</a>
 							</div>
 						</li>
-						<li class="content-item4">
+						<li class="content-item" id="content-item9">
 							<nav>
-								<p id="content-item9-title">数码家电</p>
+								<p>数码家电</p>
 								<ul>
 									<li><span>热搜词：</span></li>
 									<li class="Dcolor">
@@ -1872,9 +1864,9 @@
 								
 							</div>
 						</li>
-						<li class="content-item4">
+						<li class="content-item" id="content-item10">
 							<nav>
-								<p id="content-item10-title">环球美食</p>
+								<p>环球美食</p>
 								<ul>
 									<li><span>热搜词：</span></li>
 									<li>
@@ -2071,9 +2063,9 @@
 								
 							</div>
 						</li>
-						<li class="content-item4">
+						<li class="content-item" id="content-item11">
 							<nav>
-								<p id="content-item11-title">运动户外</p>
+								<p>运动户外</p>
 								<ul>
 									<li><span>热搜词：</span></li>
 									<li>
